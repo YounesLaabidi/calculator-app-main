@@ -1,0 +1,24 @@
+@media screen and (min-width: 600px) {
+  .calc {
+    max-width: 543px;
+    transform: scale(0.8) translateY(-41px);
+  }
+  .calc__title {
+    font-size: 2.3rem;
+  }
+  .calc__screen {
+    padding: 40px 36px;
+    font-size: 4rem;
+    min-height: 134px;
+  }
+  .calc__buttons {
+    padding: 34px;
+    row-gap: 25px;
+    column-gap: 0;
+    grid-template-columns: repeat(4, 100px);
+    justify-content: space-between;
+  }
+  .btn {
+    font-size: 30px;
+  }
+}

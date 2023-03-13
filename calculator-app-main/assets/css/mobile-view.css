@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "leagueSpartan";
+  src: url(../font/LeagueSpartan-Bold.ttf);
+}
+*,
+*::before,
+*::after {
+  transition: background 345ms ease-in-out, color 345ms ease-in-out;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  /* default font */
+  font-family: "leagueSpartan";
+  /* COLORS */
+  /* background */
+  --themeOneBackground001: hsl(222, 26%, 31%);
+  --themeOneBackground002: hsl(223, 31%, 20%);
+  --themeOneBackground003: hsl(224, 36%, 15%);
+  --themeTwoBackground001: hsl(0, 0%, 90%);
+  --themeTwoBackground002: hsl(0, 5%, 81%);
+  --themetwoBackground003: hsl(0, 0%, 93%);
+  --themeThreeBackground001: hsl(268, 75%, 9%);
+  --themeThreeBackground002: hsl(268, 71%, 12%);
+  /* keys */
+  --themeOneKey001: hsl(225, 21%, 49%);
+  --themeOneKey002: hsl(224, 28%, 35%);
+  --themeOneKey003: hsl(6, 63%, 50%);
+  --themeOneKey004: hsl(6, 70%, 34%);
+  --themeOneKey005: hsl(30, 25%, 89%);
+  --themeOneKey006: hsl(28, 16%, 65%);
+  --themeTwoKey001: hsl(185, 42%, 37%);
+  --themeTwoKey002: hsl(185, 58%, 25%);
+  --themeTwoKey003: hsl(25, 98%, 40%);
+  --themeTwoKey004: hsl(25, 99%, 27%);
+  --themeTwoKey005: hsl(45, 7%, 89%);
+  --themeTwoKey006: hsl(35, 11%, 61%);
+  --themeThreeKey001: hsl(281, 89%, 26%);
+  --themeThreeKey002: hsl(285, 91%, 52%);
+  --themeThreeKey003: hsl(176, 100%, 44%);
+  --themeThreeKey004: hsl(177, 92%, 70%);
+  --themeThreeKey005: hsl(268, 47%, 21%);
+  --themeThreeKey006: hsl(290, 70%, 36%);
+  /* text */
+  --themeOneText001: hsl(221, 14%, 31%);
+  --themeOneText002: hsl(0, 0%, 100%);
+  --themeTwoText001: hsl(60, 10%, 19%);
+  --themeTwoText002: hsl(0, 0%, 100%);
+  --themeThreeText001: hsl(52, 100%, 62%);
+  --themeThreeText002: hsl(198, 20%, 13%);
+  --themeThreeText003: hsl(0, 0%, 100%);
+}
+body {
+  padding-top: 2.5rem;
+  padding: 2.5rem 2.0625rem 0;
+}
+body.theme-one {
+  background: var(--themeOneBackground001);
+}
+.calc {
+  max-width: 20.5rem;
+  margin: 0 auto;
+  position: relative;
+}
+.calc__title {
+  color: var(--themeOneText002);
+  pointer-events: none;
+}
+.calc__theme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  column-gap: 1.875rem;
+}
+.calc__theme-text {
+  color: var(--themeOneText002);
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+.calc__toggler {
+  width: 4.375rem;
+  height: 1.875rem;
+  border-radius: 1.875rem;
+  background: var(--themeOneBackground002);
+  position: relative;
+}
+.calc__toggler::after {
+  content: "1 2 3";
+  color: var(--themeOneText002);
+  position: absolute;
+  top: -1.125rem;
+  letter-spacing: 0.3125rem;
+  font-size: 0.8rem;
+  left: 69%;
+  transform: translateX(-52%);
+  width: 100%;
+}
+.calc__switcher {
+  width: 1.1875rem;
+  height: 1.1875rem;
+  background: var(--themeOneKey003);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+.calc__screen {
+  color: var(--themeOneText002);
+  font-size: 3rem;
+  background: var(--themeOneBackground003);
+  border-radius: 0.8125rem;
+  padding: 1.5625rem 1.5625rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 2.1875rem 0 1.5625rem;
+  word-break: break-all;
+  text-align: right;
+  min-height: 95px;
+}
+.calc__buttons {
+  padding: 1.5625rem;
+  background: var(--themeOneBackground002);
+  display: grid;
+  grid-template-columns: repeat(4, 3.4375rem);
+  grid-template-rows: repeat(5, 3.4375rem);
+  column-gap: 0.875rem;
+  row-gap: 0.875rem;
+  border-radius: 0.8125rem;
+  margin-bottom: 2.0625rem;
+  justify-content: center;
+}
+.btn {
+  background: var(--themeOneKey005);
+  border-radius: 0.375rem;
+  font-size: 1.5rem;
+  box-shadow: 0rem 0.25rem 0rem var(--themeOneKey006);
+  color: var(--themeOneText001);
+}
+.btn--reset,
+.btn--equal {
+  grid-column: span 2;
+}
+.btn--del,
+.btn--reset {
+  background: var(--themeOneKey001);
+  color: var(--themeOneText002);
+  box-shadow: 0 0.25rem 0 var(--themeOneKey002);
+}
+.btn--equal {
+  background-color: var(--themeOneKey003);
+  box-shadow: 0rem 0.25rem 0rem var(--themeOneKey004);
+  color: var(--themeOneText002);
+}
+/* active state */
+.calc__switcher,
+.btn {
+  cursor: pointer;
+  transition: filter 300ms ease-in-out, left 200ms;
+}
+.btn--reset:hover,
+.btn--del:hover,
+.btn--equal:hover,
+.calc__switcher:hover {
+  filter: brightness(1.2);
+}

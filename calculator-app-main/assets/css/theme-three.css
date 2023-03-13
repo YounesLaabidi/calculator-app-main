@@ -1,0 +1,35 @@
+body.theme-three {
+  background: var(--themeThreeBackground001);
+}
+body.theme-three .calc__title,
+body.theme-three .calc__theme-text,
+body.theme-three .calc__toggler::after,
+body.theme-three .btn {
+  color: var(--themeThreeText001);
+}
+body.theme-three .calc__toggler,
+body.theme-three .calc__buttons {
+  background: var(--themeThreeBackground002);
+}
+body.theme-three .calc__switcher {
+  background: var(--themeThreeKey003);
+}
+body.theme-three .calc__screen {
+  color: var(--themeThreeText001);
+  background: var(--themeThreeBackground002);
+}
+body.theme-three .btn {
+  background: var(--themeThreeKey005);
+  box-shadow: 0rem 0.25rem 0rem var(--themeThreeKey006);
+}
+body.theme-three .btn--del,
+body.theme-three .btn--reset {
+  background: var(--themeThreeKey001);
+  box-shadow: 0 0.25rem 0 var(--themeThreeKey002);
+  color: var(--themeOneText002);
+}
+body.theme-three .btn--equal {
+  background-color: var(--themeThreeKey003);
+  box-shadow: 0rem 0.25rem 0rem var(--themeThreeKey004);
+  color: var(--themeOneText002);
+}

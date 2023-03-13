@@ -1,0 +1,35 @@
+body.theme-two {
+  background: var(--themeTwoBackground001);
+}
+body.theme-two .calc__title,
+body.theme-two .calc__theme-text,
+body.theme-two .calc__toggler::after,
+body.theme-two .btn {
+  color: var(--themeTwoText001);
+}
+body.theme-two .calc__toggler,
+body.theme-two .calc__buttons {
+  background: var(--themeTwoBackground002);
+}
+body.theme-two .calc__switcher {
+  background: var(--themeTwoKey003);
+}
+body.theme-two .calc__screen {
+  color: var(--themeTwoText001);
+  background: var(--themetwoBackground003);
+}
+body.theme-two .btn {
+  background: var(--themeTwoKey005);
+  box-shadow: 0rem 0.25rem 0rem var(--themeTwoKey006);
+}
+body.theme-two .btn--del,
+body.theme-two .btn--reset {
+  background: var(--themeTwoKey001);
+  box-shadow: 0 0.25rem 0 var(--themeTwoKey002);
+  color: var(--themeOneText002);
+}
+body.theme-two .btn--equal {
+  background-color: var(--themeTwoKey003);
+  box-shadow: 0rem 0.25rem 0rem var(--themeTwoKey004);
+  color: var(--themeOneText002);
+}
